@@ -222,3 +222,20 @@ docker tag docker.io/sanraman/cart:v1 imageID
 
 <!-- Containerization Reference : -->
     `https://docs.docker.com/reference/dockerfile/`
+
+
+
+### Containers are immutable :
+
+    * There is no concept of start or stop 
+    * Just run , means container will be created , task will be executed and container will be killed
+    * You cannot make changes on a container, even if you make you'd lose them and you have to make the changes on the image
+
+Containers are not like OS , they are mean to run a single process
+
+
+Here storage is LVM :
+1)  Expanding the disk ( like adding more disk pyhsucally on cloud , cannot be seen by the OS )
+2) You need to run growfs to let the OS know about this space addition
+3) Once you get the space, add this space to the Logical Volume
+4) Then expand the fileSystem
