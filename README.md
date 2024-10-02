@@ -239,3 +239,15 @@ Here storage is LVM :
 2) You need to run growfs to let the OS know about this space addition
 3) Once you get the space, add this space to the Logical Volume
 4) Then expand the fileSystem
+
+
+
+CMD and ENTRYPOINT are a kind of startup for container 
+
+    1) You can have n number of CMD, but only the latest will be considered in the Dockerfile
+    2) CMD is typically used to pass the arguments ( that means values mentioned in CMD can be overridden )
+    3) ENTRYPOINT : This also serves the same but cannot be overriden 
+
+      $ ls -ltr 
+
+In docker, if you mention any process by in a JSON format, it will be a process of it's own where the parent process id rectly 1 whcih is the system process.
